@@ -5,7 +5,7 @@ using TRMDataManager.Library.Models;
 
 namespace TRMDataManager.Controllers
 {
-    [Authorize(Roles = "Cashier")]
+    [Authorize(Roles = "Cashier,Admin")]
     public class ProductController : ApiController
     {
         public List<ProductModel> Get()
