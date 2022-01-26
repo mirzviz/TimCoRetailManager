@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29409.12
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRMDataManager", "TRMDataManager\TRMDataManager.csproj", "{93A981E9-E357-4F2F-9C09-3A8CE18A7968}"
 EndProject
@@ -12,6 +12,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRMDataManager.Library", "TRMDataManager.Library\TRMDataManager.Library.csproj", "{D66DB52E-53EF-41AE-A277-2C00CDBE732E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRMDesktopUI.Library", "TRMDesktopUI.Library\TRMDesktopUI.Library.csproj", "{9BF067C8-944D-4FE7-8D8D-8362BE7564C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{FF0C9140-8498-4F55-A191-1E0EB45FCF3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{4CD97A7C-15EA-47E1-90F1-864ED6698676}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{D0685C6B-37A0-4A9F-AABC-5D9602AC69BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +50,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93A981E9-E357-4F2F-9C09-3A8CE18A7968} = {4CD97A7C-15EA-47E1-90F1-864ED6698676}
+		{B7DB2E37-5C40-4DE5-BB1F-B3E20767F5D4} = {FF0C9140-8498-4F55-A191-1E0EB45FCF3B}
+		{91E6E8A6-2335-4891-838F-F537E3F05794} = {D0685C6B-37A0-4A9F-AABC-5D9602AC69BD}
+		{D66DB52E-53EF-41AE-A277-2C00CDBE732E} = {4CD97A7C-15EA-47E1-90F1-864ED6698676}
+		{9BF067C8-944D-4FE7-8D8D-8362BE7564C8} = {D0685C6B-37A0-4A9F-AABC-5D9602AC69BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9F19970-4C68-4BA2-AC0A-45498E68E72F}
