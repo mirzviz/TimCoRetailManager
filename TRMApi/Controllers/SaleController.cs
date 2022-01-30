@@ -1,23 +1,23 @@
-﻿using Microsoft.AspNet.Identity;
-using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+using System.Security.Claims;
 using TRMDataManager.Library.DataAccess;
 using TRMDataManager.Library.Models;
 
-namespace TRMDataManager.Controllers
+namespace TRMApi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     [Authorize]
-    public class SaleController : ApiController
+    public class SaleController : ControllerBase
     {
         [Authorize(Roles = "Cashier")]
         public void Post(SaleModel sale)
         {
             SaleData data = new SaleData();
-            string userId = RequestContext.Principal.Identity.GetUserId();
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);//old way - RequestContext.Principal.Identity.GetUserId();
 
             data.SaveSale(sale, userId);
         }
